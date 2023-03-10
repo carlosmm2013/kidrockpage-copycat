@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+    --font-color: #A8A393;
+    --font-family: 'Roboto Condensed', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+    background-color: black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: var(--font-family)
+}
+
+.logo {
+    width: 207px;
+}
+
+.menu {
+    width: 45%;
+}
+
+.nav-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-nav {
+    display: flex;
+    align-items: center;
+}
+
+.login-nav a {
+    padding: 0 5px;
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+
+.email {
+    background-color: transparent;
+    border: none;
+}
+
+.email::placeholder {
+    color: var(-font-color);
+    font-size: 16px;
+}
+
+.go {
+    text-decoration: none;
+    color: black;
+    background-color: var(--font-color);
+    padding: 4px 5px;
+    border-radius: 5px;
+}
+
+.submit {
+    text-decoration: none;
+    text-transform: none;
+    color: white;
+    font-size: 16px;
+}
+
+.social i {
+    color: var(--font-color);
+    padding: 6px;
+    font-size: 16px;
+}
+
+.main-menu {
+    display: flex;
+    align-items: last baseline;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.main-menu a:first-child {
+    color: whitesmoke;
+}
+
+.nav-responsive {
+    display: none;
+    cursor: pointer;
+}
+
+.nav-responsive i {
+    color: var(--font-color);
+    font-size: 2rem;
+}
+
+
+
+
+/* Responsive */
+
+@media(max-width: 280px) {
+    .logo {
+        width: 60%;
+    }
+}
+
+@media (max-width: 912px) {
+    .nav-responsive {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav-info {
+        display: none;
+    }
+
+    .main-menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background-color: black;
+        right: 0;
+        top: 90px;
+        width: 200px;        
+        max-height: 0px;
+        overflow: hidden;
+        transition: 0.4s;
+    }
+
+    .main-menu a {
+        padding: 5px 30px;
+    }
+
+    /* .nav-responsive:hover ~ .main-menu {
+        max-height: 500px;
+        background-color: antiquewhite;
+    }
+    */
+
+    .nav-responsive-active {
+        
+        max-height: 500px;
+    }
+}
