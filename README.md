@@ -1,1 +1,6 @@
-# Copycat en construcción
+# Tecnología usada
+
+* HTML
+* CSS
+* Javascript
+* Media query
