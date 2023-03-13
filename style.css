@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+.container {
+    width: 100%;
+}
+
 /* Header */
 
 header {
@@ -139,7 +143,7 @@ header {
 
 .hero-img {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin-bottom: 50px;
 }
 
@@ -180,6 +184,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     /* border: solid 1px black; */
     width: 100%;
     padding: 20px;
@@ -192,7 +197,6 @@ header {
 .tour-place {
     width: 300px;
     letter-spacing: 3px;
-    ;
 }
 
 .tour-place p {
@@ -233,6 +237,7 @@ header {
     cursor: pointer;
     text-transform: uppercase;
     transition: 0.4s;
+    width: 180px;
 }
 
 .buy-tickets:hover {
@@ -313,7 +318,7 @@ header {
 }
 
 .news-post img {
-    max-width: 310px;
+    max-width: 40%;    
     float: left;
     margin-right: 20px;
 }
@@ -385,13 +390,20 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .multimedia-youtube {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 560px;
+    
 }
+
+/* .multimedia-youtube iframe {
+    width: 100%;
+} */
 
 .multimedia-title {
     color: #DBB52F;
@@ -491,16 +503,30 @@ footer {
 
 /* Responsive */
 
-@media(max-width: 280px) {
+/* @media(max-width: 992px) {
     .logo {
         width: 60%;
     }
+} */
+
+@media (max-width: 1280px) {
+    .social {
+        display: none;
+    }
 }
 
-@media (max-width: 912px) {
+@media (max-width: 992px) {
+    header {
+        width: 100%;
+    }
+
     .nav-responsive {
         display: flex;
         justify-content: flex-end;
+    }
+
+    .nav-responsive i {
+        color: white;
     }
 
     .nav-info {
@@ -523,16 +549,72 @@ footer {
 
     .main-menu a {
         padding: 5px 30px;
-    }
-
-    /* .nav-responsive:hover ~ .main-menu {
-        max-height: 500px;
-        background-color: antiquewhite;
-    }
-    */
+    }   
 
     .nav-responsive-active {
-
         max-height: 500px;
     }
+
+    .social{
+        display:none;
+    }
+
+    .hero {
+        width: 100%;
+    }
+
+    .hero-img {
+        width: 100%;
+    }
+
+    .month,.day {
+        font-size:4rem;
+    }
+
+    .tour-place {
+        text-align: center;
+    }
+
+    .news-container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .news-post {
+        height: auto;
+        width: 100%;
+    }
+
+    .news-post img {
+        margin-bottom: 10px;
+        width: 200px;
+    }
+
+    .multimedia {
+        flex-direction: column;
+        align-items: center;
+    }  
+
+    .multimedia-youtube {
+        width:100%;
+    }
+
+    .multimedia-youtube iframe {
+        width: 100%;
+    }
+
+    .buy-tickets {
+        margin-top: 10px;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-social {
+        border: none;
+        align-items: center;
+    }
+
+    
 }
